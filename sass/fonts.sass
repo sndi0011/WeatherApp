@@ -13,8 +13,8 @@ $font-fallback: Arial, "sans-serif"
 		font-family: $family
 		@each $name,$format in $font-format 
 			+font-src($family,$family-title,$name,$format)
-		font-weight: $weight;
-		font-style: $font-style;
+		font-weight: $weight
+		font-style: $font-style
 
 =get-font($font-family) 
 	font-family: $font-family, $font-fallback

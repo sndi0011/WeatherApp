@@ -153,11 +153,11 @@
 }
 
 .day:hover .rain .rain-drop1 {
-  animation: rainy 1s infinite ease-out;
-  -ms-animation: rainy 1s infinite ease-out;
-  -webkit-animation: rainy 1s infinite ease-out;
-  -o-animation: rainy 1s infinite ease-out;
-  -moz-animation: rainy 1s infinite ease-out;
+  animation: rainy 2.4s infinite ease-out;
+  -ms-animation: rainy 2.4s infinite ease-out;
+  -webkit-animation: rainy 2.4s infinite ease-out;
+  -o-animation: rainy 2.4s infinite ease-out;
+  -moz-animation: rainy 2.4s infinite ease-out;
 }
 
 .day:hover .rain .rain-drop2 {
@@ -169,22 +169,14 @@
 }
 
 .day:hover .rain .rain-drop3 {
-  animation: rainy 2.4s infinite ease-out;
-  -ms-animation: rainy 2.4s infinite ease-out;
-  -webkit-animation: rainy 2.4s infinite ease-out;
-  -o-animation: rainy 2.4s infinite ease-out;
-  -moz-animation: rainy 2.4s infinite ease-out;
+  animation: rainy 2.2s infinite ease-out;
+  -ms-animation: rainy 2.2s infinite ease-out;
+  -webkit-animation: rainy 2.2s infinite ease-out;
+  -o-animation: rainy 2.2s infinite ease-out;
+  -moz-animation: rainy 2.2s infinite ease-out;
 }
 
 .day:hover .rain .rain-drop4 {
-  animation: rainy 2.4s infinite ease-out;
-  -ms-animation: rainy 2.4s infinite ease-out;
-  -webkit-animation: rainy 2.4s infinite ease-out;
-  -o-animation: rainy 2.4s infinite ease-out;
-  -moz-animation: rainy 2.4s infinite ease-out;
-}
-
-.day:hover .rain .rain-drop5 {
   animation: rainy 1.6s infinite ease-out;
   -ms-animation: rainy 1.6s infinite ease-out;
   -webkit-animation: rainy 1.6s infinite ease-out;
@@ -192,15 +184,15 @@
   -moz-animation: rainy 1.6s infinite ease-out;
 }
 
-.day:hover .rain .rain-drop6 {
-  animation: rainy 1s infinite ease-out;
-  -ms-animation: rainy 1s infinite ease-out;
-  -webkit-animation: rainy 1s infinite ease-out;
-  -o-animation: rainy 1s infinite ease-out;
-  -moz-animation: rainy 1s infinite ease-out;
+.day:hover .rain .rain-drop5 {
+  animation: rainy 1.2s infinite ease-out;
+  -ms-animation: rainy 1.2s infinite ease-out;
+  -webkit-animation: rainy 1.2s infinite ease-out;
+  -o-animation: rainy 1.2s infinite ease-out;
+  -moz-animation: rainy 1.2s infinite ease-out;
 }
 
-.day:hover .rain .rain-drop7 {
+.day:hover .rain .rain-drop6 {
   animation: rainy 2.4s infinite ease-out;
   -ms-animation: rainy 2.4s infinite ease-out;
   -webkit-animation: rainy 2.4s infinite ease-out;
@@ -208,12 +200,20 @@
   -moz-animation: rainy 2.4s infinite ease-out;
 }
 
-.day:hover .rain .rain-drop8 {
+.day:hover .rain .rain-drop7 {
   animation: rainy 1.2s infinite ease-out;
   -ms-animation: rainy 1.2s infinite ease-out;
   -webkit-animation: rainy 1.2s infinite ease-out;
   -o-animation: rainy 1.2s infinite ease-out;
   -moz-animation: rainy 1.2s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop8 {
+  animation: rainy 1.6s infinite ease-out;
+  -ms-animation: rainy 1.6s infinite ease-out;
+  -webkit-animation: rainy 1.6s infinite ease-out;
+  -o-animation: rainy 1.6s infinite ease-out;
+  -moz-animation: rainy 1.6s infinite ease-out;
 }
 
 .day:hover .sunny {

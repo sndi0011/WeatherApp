@@ -135,3 +135,9 @@
     font-size: 6px;
   }
 }
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 5px;
+  }
+}
