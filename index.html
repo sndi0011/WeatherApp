@@ -51,7 +51,7 @@
 			<p class="temperature"> <span class="temperature-num">23°</span> <span class="temperature-title">sunny</span> </p>
 		</div>
 		<div class="col-lg-9 col-sm-12 weather-days" id="more-days">
-			<div class="weather-scroll" ng-class="{moredays: isMore==true}">
+			<div class="weather-scroll" ng-class="{moredays: isMore}">
 				<div class="col-lg-2 day" ng-repeat="day in days" title="{{day.day}} - {{day.type}}">
 					<h2 class="day-title">{{day.day}}</h2>
 					<div class="weather-image {{day.type}}" aria-hidden="true" ng-bind-html="renderHtml(day.html)"></div>
