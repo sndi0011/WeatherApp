@@ -1,0 +1,57 @@
+=full-width()
+	width: 100%
+
+=full-height() 
+	height: 100%
+
+=placeholder-color($placeholder)
+	input::placeholder 
+		color: $placeholder
+		opacity: 1;
+
+	input:-ms-input-placeholder 
+		color: $placeholder
+
+	input::-ms-input-placeholder 
+		color: $placeholder
+
+=getGradient($deg, $color1, $position1, $color2, $position2)
+	background-color: $color1
+	background-color: -moz-linear-gradient($deg, $color1 $position1, $color2 $position2)
+	background-color: -webkit-linear-gradient($deg, $color1 $position1, $color2 $position2)
+	background-color: linear-gradient($deg, $color1 $position1, $color2 $position2)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1',endColorstr='$color2',GradientType=1)
+
+=setKeyframes($name,$prop,$value1,$value2) 
+	@keyframes #{$name} 
+		@content
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+
+=keyframes($name,$prop,$value1,$value2) 
+	+setKeyframes($name,$prop,$value1,$value2)
+		from
+			#{$prop}: $value1
+		to
+			#{$prop}: $value2
+
+
+=animation($name,$time,$loop,$ease)
+	+crossbrowser(animation, $name $time $loop $ease)
+	
+=crossbrowser($prop,$value)
+	#{$prop}: $value
+	-ms-#{$prop}: $value
+	-webkit-#{$prop}: $value
+	-o-#{$prop}: $value
+	-moz-#{$prop}: $value
+
+
+=reduceSizeMobile($width,$fontsize)
+	@media screen and (max-width: #{$width}px) 
+		html 
+			font-size: #{$fontsize}px

@@ -1,0 +1,26 @@
+$font-family: "OpenSans"
+$font-url: "../fonts/"
+$font-format: (woff:"woff",woff2:"woff2",ttf:"truetype")
+$font-weight: (Light:300,Regular:400,SemiBold:600)
+$font-style: "normal"
+$font-fallback: Arial, "sans-serif"
+
+=font-src($family,$title,$format,$format-name)
+	src: url($font-url+$family+"-"+$title+"."+$format) format($format-name)
+
+=font-face($family, $family-title, $weight) 
+	@font-face
+		font-family: $family
+		@each $name,$format in $font-format 
+			+font-src($family,$family-title,$name,$format)
+		font-weight: $weight;
+		font-style: $font-style;
+
+=get-font($font-family) 
+	font-family: $font-family, $font-fallback
+
+@each $name, $weight in $font-weight 
+	+font-face($font-family, $name, $weight)
+
+body 
+	+get-font($font-family)

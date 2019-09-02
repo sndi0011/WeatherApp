@@ -1,0 +1,137 @@
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url(../images/back_mobile.jpg);
+    font-size: 1em;
+    background-color: #0622ad;
+    min-height: 155rem;
+  }
+  .input-search {
+    float: none;
+    margin: 5rem auto 1rem auto;
+    display: block;
+    width: 19em;
+    min-width: 80%;
+    max-width: 90%;
+  }
+  .col-today {
+    max-width: 25rem;
+    margin: 0 auto 3rem auto;
+    float: none;
+  }
+  .weather-days {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .temperature {
+    font-size: 0.94rem;
+  }
+  .temperature-num {
+    margin-top: 5.2rem;
+    font-weight: 600;
+  }
+  .temperature-title {
+    margin-top: 1.8rem;
+  }
+  .main, .container-fluid, .row {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .weather-days, .weather-row, .weather-scroll {
+    width: 100%;
+    max-width: 100%;
+  }
+  .day, .day:first-child, .day:last-child {
+    display: block;
+    float: none;
+    width: 25rem;
+    max-width: 90%;
+    margin: 3rem auto 5rem auto;
+  }
+  .day:first-child {
+    margin-top: 0;
+  }
+  .day .temperature {
+    margin-top: 2rem;
+  }
+  .weather-scroll {
+    height: 200%;
+    transition: margin-top 0.5s ease-out;
+    -ms-transition: margin-top 0.5s ease-out;
+    -webkit-transition: margin-top 0.5s ease-out;
+    -o-transition: margin-top 0.5s ease-out;
+    -moz-transition: margin-top 0.5s ease-out;
+  }
+  .arrow-right {
+    top: 136rem;
+    left: 50%;
+    width: 3.6rem;
+    margin-left: -1.8rem;
+    transform: rotate(90deg);
+    margin-bottom: 2rem;
+  }
+  .moredays {
+    margin-left: 0;
+    margin-top: -105rem;
+  }
+  .weather-days {
+    height: 100rem;
+    position: relative;
+    display: inline-block;
+    float: none;
+  }
+  .flip {
+    transform: rotate(-90deg);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 6px;
+  }
+}

@@ -1,0 +1,275 @@
+html {
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  margin: 0;
+  direction: ltr;
+  text-align: left;
+  color: white;
+  background-color: #151b66;
+  background-image: url(../images/back.jpg);
+  background-size: 100% auto;
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding: 0 5.5%;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.input-search {
+  width: 19em;
+  border: 2px solid #5399e6;
+  color: #0d1e57;
+  text-align: center;
+  padding: 0.85em 0.9em 0.85em 4em;
+  letter-spacing: -0.03em;
+  background-image: url(../images/search-icon.png);
+  background-position: 2.4em center;
+  background-repeat: no-repeat;
+  background-size: 1em auto;
+  background-color: #6ca7da;
+  background-color: -moz-linear-gradient(45deg, #6ca7da 0%, #7cb2df 100%);
+  background-color: -webkit-linear-gradient(45deg, #6ca7da 0%, #7cb2df 100%);
+  background-color: linear-gradient(45deg, #6ca7da 0%, #7cb2df 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1',endColorstr='$color2',GradientType=1);
+  float: right;
+  margin-top: 3.5rem;
+}
+
+input::placeholder {
+  color: #0d1e57;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: #0d1e57;
+}
+
+input::-ms-input-placeholder {
+  color: #0d1e57;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.weather-row {
+  position: relative;
+}
+
+.day:hover {
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+.arrow-right {
+  width: 3.6rem;
+  height: auto;
+  margin-bottom: 1.7rem;
+  position: absolute;
+  top: -5rem;
+  right: 0;
+  cursor: pointer;
+}
+
+.header {
+  font-size: 1.82em;
+}
+
+.main {
+  margin-top: 11.7rem;
+}
+
+.weather-days {
+  max-width: 70%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.weather-scroll {
+  width: 200%;
+  transition: margin-left 0.5s ease-out;
+  -ms-transition: margin-left 0.5s ease-out;
+  -webkit-transition: margin-left 0.5s ease-out;
+  -o-transition: margin-left 0.5s ease-out;
+  -moz-transition: margin-left 0.5s ease-out;
+}
+
+.moredays {
+  margin-left: -100%;
+}
+
+.day {
+  float: none;
+  display: inline-block;
+  max-width: 15%;
+  margin-right: 1.5%;
+  padding: 2rem 2.5rem 0rem 2.5rem;
+  margin-top: 0rem;
+  background-color: rgba(255, 255, 255, 0.11);
+  height: 30rem;
+}
+
+.day:first-child {
+  margin-left: 2%;
+}
+
+.day:last-child {
+  margin-right: 0;
+}
+
+.col-today {
+  max-width: 25.6%;
+  margin-right: 2%;
+  padding: 2.2rem 1.1rem 0rem 1.1rem;
+  background-color: transparent;
+  float: left;
+}
+
+.city-title {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 3.45em;
+  letter-spacing: -0.03em;
+}
+
+.day-title {
+  font-weight: 400;
+  font-size: 2.05em;
+}
+
+.col-today .day-title {
+  font-size: 1.82em;
+  margin-left: 0.1em;
+}
+
+.temperature-num {
+  font-size: 12em;
+  display: block;
+  font-weight: 300;
+  line-height: 1em;
+  margin-top: 4rem;
+}
+
+.temperature-title {
+  font-size: 2.75em;
+  margin-left: 0.05em;
+  display: block;
+  line-height: 1em;
+  margin-top: 1.5rem;
+}
+
+.next-temperature {
+  margin-left: 0.1em;
+}
+
+.next-temperature .temperature-num {
+  font-size: 4.2em;
+  margin-top: 1.3rem;
+}
+
+.next-temperature .temperature-title {
+  font-size: 2.1em;
+  font-weight: 400;
+  margin-top: 1.35rem;
+}
+
+@media screen and (max-width: 1650px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1450px) and (min-width: 992px) {
+  body {
+    font-size: 13px;
+  }
+  .day {
+    padding: 1.5rem 1rem 0rem 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-height: 880px) {
+  html {
+    font-size: 13px;
+  }
+  body {
+    font-size: 1em;
+  }
+  .weather-image {
+    width: 12.5em;
+  }
+  .temperature-num {
+    margin-top: 3rem;
+  }
+  .temperature-title {
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-height: 800px) {
+  html {
+    font-size: 12px;
+  }
+  .next-temperature .temperature-title {
+    margin-top: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-height: 700px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-height: 600px) {
+  html {
+    font-size: 10px;
+  }
+  .input-search {
+    margin-top: 2rem;
+  }
+  .day, .col-today {
+    margin-top: 1rem;
+  }
+  .arrow-right {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    width: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-height: 520px) {
+  html {
+    font-size: 9px;
+  }
+  .input-search {
+    margin-top: 2rem;
+  }
+  .day, .col-today {
+    margin-top: 1rem;
+  }
+  .main {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-height: 800px) and (min-width: 992px) {
+  body {
+    padding: 0 3%;
+  }
+  .sunny-wrap {
+    top: 4%;
+  }
+}

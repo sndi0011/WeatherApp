@@ -1,0 +1,165 @@
+$fontsize: 16px
+$min-screen: 460px
+$color: white
+$blue-color: #0d1e57
+$background-color: #151b66
+
+
+@import functions
+	
+html 
+	font-size: $fontsize
+	+full-width()
+	+full-height()
+
+body 
+	+full-width()
+	+full-height()
+	min-height: $min-screen
+	margin: 0
+	direction: ltr
+	text-align: left
+	color: $color
+	background-color: $background-color
+	background-image: url(../images/back.jpg)
+	background-size: 100% auto
+	background-position: top left
+	background-repeat: no-repeat
+	padding: 0 5.5%
+	
+.no-padding
+	padding: 0
+
+.input-search 
+	width: 19em
+	border: 2px solid #5399e6
+	color: $blue-color
+	text-align: center
+	padding: 0.85em 0.9em 0.85em 4em
+	letter-spacing: -0.03em
+	background-image: url(../images/search-icon.png)
+	background-position: 2.4em center
+	background-repeat: no-repeat
+	background-size: 1em auto
+	+getGradient(45deg, #6ca7da, 0%, #7cb2df, 100%)
+	float: right
+	margin-top: 3.5rem
+
++placeholder-color($blue-color)
+
+.flip 
+	transform: rotateY(180deg)
+
+
+.weather-row 
+	position: relative
+
+.day:hover 
+	background-color: rgba(255,255,255,0.13)
+
+.arrow-right 
+	width: 3.6rem
+	height: auto
+	margin-bottom: 1.7rem
+	position: absolute
+	top: -5rem
+	right: 0
+	cursor: pointer;
+
+.header 
+	font-size: 1.82em
+
+
+.main 
+	margin-top: 11.7rem
+
+
+.weather-days 
+	max-width: 70%
+	overflow: hidden
+	margin: 0
+	padding: 0
+
+.weather-scroll 
+	width: 200%
+	+crossbrowser(transition,margin-left 0.5s ease-out)
+
+.moredays 
+	margin-left: -100%
+
+.day 
+	float: none
+	display: inline-block
+	max-width: 15%
+	margin-right: 1.5%
+	padding: 2rem 2.5rem 0rem 2.5rem
+	margin-top: 0rem
+	background-color: rgba(255,255,255,0.11)
+	height: 30rem
+
+.day:first-child 
+	margin-left: 2%
+
+.day:last-child 
+	margin-right: 0
+
+.col-today 
+	max-width: 25.6%
+	margin-right: 2%
+	padding: 2.2rem 1.1rem 0rem 1.1rem
+	background-color: transparent
+	float: left
+
+
+.city-title 
+	text-transform: uppercase
+	font-weight: 400
+	margin: 0
+	padding: 0
+	font-size: 3.45em
+	letter-spacing: -0.03em
+
+
+.day-title 
+	font-weight: 400
+	font-size: 2.05em
+
+
+.col-today .day-title 
+	font-size: 1.82em
+	margin-left: 0.1em
+
+
+.temperature-num 
+	font-size: 12em
+	display: block
+	font-weight: 300
+	line-height: 1em
+	margin-top: 4rem
+
+
+.temperature-title 
+	font-size: 2.75em
+	margin-left: 0.05em
+	display: block
+	line-height: 1em
+	margin-top: 1.5rem
+
+
+.next-temperature 
+	margin-left: 0.1em
+
+
+.next-temperature .temperature-num 
+	font-size: 4.2em
+	margin-top: 1.3rem
+
+
+.next-temperature .temperature-title 
+	font-size: 2.1em
+	font-weight: 400
+	margin-top: 1.35rem
+
+
+
+@import responsiveDesktop

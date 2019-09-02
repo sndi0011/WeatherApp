@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="myApp" ng-controller="MyCtrl">
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="script/angular.min.js"></script>
+<script type="text/javascript" src="script/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="script/bootstrap.min.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/fonts.css">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="stylesheet" type="text/css" href="style/icons.css">
+<link rel="stylesheet" type="text/css" href="style/mobile.css">
+<link ng-repeat="fav in favicons" rel="{{fav.rel}}" sizes="{{fav.size+'x'+fav.size}}" href="{{'images/favicon/'+fav.href+'-'+fav.size+'x'+fav.size+'.png'}}">
+<link rel="manifest" href="images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#0622ad">
+<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#0622ad">
+<title>New York Weather App</title>
+<meta name="title" content="New York Weather App">
+<meta name="description" content="Weather app - New York city and much more!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sndi.co.il/herolo/">
+<meta property="og:title" content="New York Weather App">
+<meta property="og:description" content="Weather app - New York city and much more!">
+<meta property="og:image" content="https://sndi.co.il/herolo/images/weather-app.jpg">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://sndi.co.il/herolo/">
+<meta property="twitter:title" content="New York Weather App">
+<meta property="twitter:description" content="Weather app - New York city and much more!">
+<meta property="twitter:image" content="https://sndi.co.il/herolo/images/weather-app.jpg">
+</head>
+<body>
+<header class="header container-fluid">
+	<div class="row">
+		<div class="col-lg-12 no-padding">
+			<input type="search" class="input-search" maxlength="30" title="Search another city" placeholder="Search another city"/>
+		</div>
+	</div>
+</header>
+<main class="main container-fluid">
+	<div class="row weather-row justify-content-between"> <a class="show-more" title="Show more" ng-click="isMore=!isMore"><img src="images/arrow-right.png" class="arrow-right" alt="Show more" ng-class="{flip: isMore==true}"/></a>
+		<div class="col-lg-3 col-sm-12 col-today" title="today - sunny">
+			<h1 class="city-title">New York</h1>
+			<h2 class="day-title">today</h2>
+			<p class="temperature"> <span class="temperature-num">23°</span> <span class="temperature-title">sunny</span> </p>
+		</div>
+		<div class="col-lg-9 col-sm-12 weather-days" id="more-days">
+			<div class="weather-scroll" ng-class="{moredays: isMore==true}">
+				<div class="col-lg-2 day" ng-repeat="day in days" title="{{day.day}} - {{day.type}}">
+					<h2 class="day-title">{{day.day}}</h2>
+					<div class="weather-image {{day.type}}" aria-hidden="true" ng-bind-html="renderHtml(day.html)"></div>
+					<p class="temperature next-temperature"> <span class="temperature-num">{{day.temperature}}</span> <span class="temperature-title">{{day.type}}</span> </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+</body>
+</html>
