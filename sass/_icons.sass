@@ -1,0 +1,88 @@
+@import functions
+	
+.rain-drop1,.rain-drop5 
+	top: 7%
+	left: 11%
+	width: 10%
+	height: 30%
+
+.rain-drop2,.rain-drop6 
+	top: 28%
+	left: 33%
+	width: 10%
+	height: 30%
+
+.rain-drop3,.rain-drop7
+	top: 8%
+	left: 50%
+
+.rain-drop4,.rain-drop8 
+	top: 14%
+	left: 79%
+
+
+.rain 
+	background-image: url(../images/rain-cloud.png)
+	position: relative
+
+.drops 
+	width: 100%
+	height: 50%
+	position: absolute
+	bottom: 0
+	left: 0
+	overflow: hidden
+
+.rain-drop 
+	width: 12%
+	height: 37%
+	background-image: url(../images/rain-drop.png)
+	background-size: 100% 100%
+	position: absolute
+
+
+.cloudy-wrap
+	background-image: url(../images/cloudy.png)
+	position: absolute
+	z-index: 2
+
+
+.cloudy 
+	position: relative
+
+
+
+.weather-image, .cloudy-wrap 
+	width: 14em
+	max-width: 100%
+	margin: 0 auto
+	height: 13.5rem
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: 100% auto
+
+.sunny 
+	background-image: url(../images/sunny.png)
+	background-size: 80% auto
+	max-width: 85%
+
+.sunny-wrap 
+	position: absolute
+	height: 50.9%
+	width: 70%
+	top: 6%
+	right: -3%
+	z-index: 1
+	overflow: hidden
+	transform: rotate(11deg)
+
+
++keyframes(rainy,margin-top,-4em,7em)
++keyframes(spin,transform,rotate(0deg),rotate(360deg))
+	
+@for $i from 1 to 9 
+	.day:hover .rain .rain-drop#{$i} 
+		+animation(rainy,random(10)/5+0.4*1s, infinite, ease-out)
+
+.day:hover .sunny 
+	+animation(spin,5s, infinite, linear)

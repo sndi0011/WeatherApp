@@ -1,11 +1,13 @@
 html {
   font-size: 16px;
   width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
 body {
   width: 100%;
+  max-width: 100%;
   height: 100%;
   min-height: 460px;
   margin: 0;
@@ -182,6 +184,233 @@ input::-ms-input-placeholder {
   font-size: 2.1em;
   font-weight: 400;
   margin-top: 1.35rem;
+}
+
+.rain-drop1, .rain-drop5 {
+  top: 7%;
+  left: 11%;
+  width: 10%;
+  height: 30%;
+}
+
+.rain-drop2, .rain-drop6 {
+  top: 28%;
+  left: 33%;
+  width: 10%;
+  height: 30%;
+}
+
+.rain-drop3, .rain-drop7 {
+  top: 8%;
+  left: 50%;
+}
+
+.rain-drop4, .rain-drop8 {
+  top: 14%;
+  left: 79%;
+}
+
+.rain {
+  background-image: url(../images/rain-cloud.png);
+  position: relative;
+}
+
+.drops {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rain-drop {
+  width: 12%;
+  height: 37%;
+  background-image: url(../images/rain-drop.png);
+  background-size: 100% 100%;
+  position: absolute;
+}
+
+.cloudy-wrap {
+  background-image: url(../images/cloudy.png);
+  position: absolute;
+  z-index: 2;
+}
+
+.cloudy {
+  position: relative;
+}
+
+.weather-image, .cloudy-wrap {
+  width: 14em;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 13.5rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.sunny {
+  background-image: url(../images/sunny.png);
+  background-size: 80% auto;
+  max-width: 85%;
+}
+
+.sunny-wrap {
+  position: absolute;
+  height: 50.9%;
+  width: 70%;
+  top: 6%;
+  right: -3%;
+  z-index: 1;
+  overflow: hidden;
+  transform: rotate(11deg);
+}
+
+@keyframes rainy {
+  from {
+    margin-top: -4em;
+  }
+  to {
+    margin-top: 7em;
+  }
+}
+
+@-webkit-keyframes rainy {
+  from {
+    margin-top: -4em;
+  }
+  to {
+    margin-top: 7em;
+  }
+}
+
+@-moz-keyframes rainy {
+  from {
+    margin-top: -4em;
+  }
+  to {
+    margin-top: 7em;
+  }
+}
+
+@-ms-keyframes rainy {
+  from {
+    margin-top: -4em;
+  }
+  to {
+    margin-top: 7em;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.day:hover .rain .rain-drop1 {
+  animation: rainy 1s infinite ease-out;
+  -ms-animation: rainy 1s infinite ease-out;
+  -webkit-animation: rainy 1s infinite ease-out;
+  -o-animation: rainy 1s infinite ease-out;
+  -moz-animation: rainy 1s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop2 {
+  animation: rainy 0.6s infinite ease-out;
+  -ms-animation: rainy 0.6s infinite ease-out;
+  -webkit-animation: rainy 0.6s infinite ease-out;
+  -o-animation: rainy 0.6s infinite ease-out;
+  -moz-animation: rainy 0.6s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop3 {
+  animation: rainy 2.4s infinite ease-out;
+  -ms-animation: rainy 2.4s infinite ease-out;
+  -webkit-animation: rainy 2.4s infinite ease-out;
+  -o-animation: rainy 2.4s infinite ease-out;
+  -moz-animation: rainy 2.4s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop4 {
+  animation: rainy 0.6s infinite ease-out;
+  -ms-animation: rainy 0.6s infinite ease-out;
+  -webkit-animation: rainy 0.6s infinite ease-out;
+  -o-animation: rainy 0.6s infinite ease-out;
+  -moz-animation: rainy 0.6s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop5 {
+  animation: rainy 0.6s infinite ease-out;
+  -ms-animation: rainy 0.6s infinite ease-out;
+  -webkit-animation: rainy 0.6s infinite ease-out;
+  -o-animation: rainy 0.6s infinite ease-out;
+  -moz-animation: rainy 0.6s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop6 {
+  animation: rainy 1.8s infinite ease-out;
+  -ms-animation: rainy 1.8s infinite ease-out;
+  -webkit-animation: rainy 1.8s infinite ease-out;
+  -o-animation: rainy 1.8s infinite ease-out;
+  -moz-animation: rainy 1.8s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop7 {
+  animation: rainy 1.2s infinite ease-out;
+  -ms-animation: rainy 1.2s infinite ease-out;
+  -webkit-animation: rainy 1.2s infinite ease-out;
+  -o-animation: rainy 1.2s infinite ease-out;
+  -moz-animation: rainy 1.2s infinite ease-out;
+}
+
+.day:hover .rain .rain-drop8 {
+  animation: rainy 0.6s infinite ease-out;
+  -ms-animation: rainy 0.6s infinite ease-out;
+  -webkit-animation: rainy 0.6s infinite ease-out;
+  -o-animation: rainy 0.6s infinite ease-out;
+  -moz-animation: rainy 0.6s infinite ease-out;
+}
+
+.day:hover .sunny {
+  animation: spin 5s infinite linear;
+  -ms-animation: spin 5s infinite linear;
+  -webkit-animation: spin 5s infinite linear;
+  -o-animation: spin 5s infinite linear;
+  -moz-animation: spin 5s infinite linear;
 }
 
 @media screen and (max-width: 1650px) {
